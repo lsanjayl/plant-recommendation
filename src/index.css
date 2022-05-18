@@ -849,3 +849,58 @@ footer {
 .field1 {
     margin-top: 60px;
 }
+.page-header{
+    background-image: url('img/Wheat.jpg');
+}
+.bg-wide{
+    background-image: url('img/pr_bg2.jpeg');
+}
+.bttn{
+                        margin: 70px;
+                        width: 250px;
+                        color: rgb(0, 0, 0);
+                        box-shadow: 0 0 0 rgb(77, 76, 76), 0 2px 0 rgba(0, 255, 242, 0.123), 0 2px 2px rgba(0, 0, 0, 0.096);
+                        text-shadow: 0 0 0 #000;
+                        padding: 10px 50px;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size: 22px;
+                        transition: all 0.3s ease-in-out;
+                        background-color: #94e6f541;
+                        border-radius: 5px;
+                        overflow: hidden;
+}
+.bttn:hover{
+    box-shadow: 0 5px 15px -5px rgb(47, 48, 48);
+                        transform: translateY(-6px);
+                        -webkit-transform: translateY(-6px);
+                        -moz-transform: translateY(-6px);
+                        transform: translateY(-6px);
+                        box-shadow: 0 7px 10px rgba(0, 0, 0, 0.274);
+                        -moz-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
+                        -webkit-box-shadow: 0 7px 10px rgba(0, 0, 0, 0.205);
+
+}
+.pic1{
+    background-image: url('img/home.jpg');
+
+}
+.pic2{
+    background-image: url('img/suggested.png');
+}
+
+.pic3{
+    background-image: url('img/appstore-btn.png');
+}
+.pic4{
+    background-image: url('img/playstore-btn.png');
+}
+.pfer{
+    background-image: url('img/fertilizers.jpeg');
+    
+}
+.psoil{
+    background-image: url('img/soiltester.jpeg');
+}
+.pdis{
+    background-image: url('img/plantdisease.jpeg');
+}
