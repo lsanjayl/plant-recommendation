@@ -1,4 +1,6 @@
-const landing =()=>{
+import {useNavigate} from "react-router-dom"
+const Landing =()=>{
+    const navigate = useNavigate();
     return(
     <div className="boxed-page">
         <nav id="gtco-header-navbar" className="navbar navbar-expand-lg py-4">
@@ -28,16 +30,16 @@ const landing =()=>{
             </div>
 
         </nav>
-         <div className="jumbotron d-flex align-items-center bg-wide" >
+         <div className="jumbotron d-flex align-items-center bg-wide ">
             <div className="container text-center">
                 <h1 className="display-2 mb-6">PLANT RECOMMENDATION</h1>
                 <p>
-                    <b>Find the best trees, unique fruits and edibles that gives you <b> more yield </b> . <br/> <b> New ideas</b> for transforming your outdoor spaces and more. <br></br> We provide you with the <b> most accurate details </b> in town for the
+                    <b>Find the best trees, unique fruits and edibles that gives you <b> more yield </b> . <br/> <b> New ideas</b> for transforming your outdoor spaces and more. <br/>We provide you with the <b> most accurate details </b> in town for the
                     crop recommendation . 
                     </b>
 
                 </p>
-                
+                <button className="bttn" onClick={()=>navigate("./forms")}>Enter the data</button>
             </div>
         </div>
         
@@ -114,7 +116,7 @@ const landing =()=>{
                                     <b>Our own mobile app</b> ,<br/> for your use !
                                 </h2>
                                 <p className="section-sub-title">
-                                    <b> There is our App </b> , <br> which is developed to help users to know about the crop diseases , </br> to get crop recommendations and to know more about the things about the crops .
+                                    <b> There is our App </b> , <br/> which is developed to help users to know about the crop diseases , <br/> to get crop recommendations and to know more about the things about the crops .
                                 </p>
                             </div>
 
@@ -124,14 +126,14 @@ const landing =()=>{
 
                                     <div className="col-md-4 offset-md-2 col-sm-6">
                                         <div className="my-5">
-                                            <span class="lnr lnr-smartphone fs-40 color-primary"></span>
+                                            <span className="lnr lnr-smartphone fs-40 color-primary"></span>
                                         </div>
                                         <h4 className="mb-4">Our smart phone app</h4>
-                                        <p>Our app aims to provide wide range of solutions for biggest questions of people ! <br> "What should I cultivate now" </br> And now it's in your hands anywhere you go !</p>
+                                        <p>Our app aims to provide wide range of solutions for biggest questions of people ! <br/> "What should I cultivate now" <br/> And now it's in your hands anywhere you go !</p>
                                     </div>
 
-                                    <div className="col-md-4 offset-md-right-2 col-sm-6">
-                                        <img className="my-5" src="img/home.jpg" alt=""/>
+                                    <div className="col-md-4 offset-md-right-2 col-sm-6 pic1">
+                                        {/* <img className="pic1"/> */}
                                     </div>
 
                                 </div>
@@ -142,15 +144,15 @@ const landing =()=>{
 
                                 <div className="row featurettes-item">
 
-                                    <div className="col-md-4 offset-md-2 col-sm-6">
-                                        <img className="my-4" src="img/suggested.png" alt=""/>
+                                    <div className="col-md-4 offset-md-2 col-sm-6 pic2">
+                                        {/* <img className="pic2"/> */}
                                     </div>
 
                                     <div className="col-md-4 offset-md-right-2 col-sm-6 mb-5">
                                         <div className="my-4">
                                             <span className="lnr lnr-map fs-40 color-primary"></span>
                                         </div>
-                                        <h4 class="mb-4">Based on location</h4>
+                                        <h4 className="mb-4">Based on location</h4>
                                         <p>Gets the location of user and provides recommendation for that area based on the NPK values provided .</p>
                                     </div>
 
@@ -167,9 +169,9 @@ const landing =()=>{
                                         <p>Check our user friendly mobile apps which are available in both playstore and appstore .</p>
                                     </div>
 
-                                    <div className="col-md-4 offset-md-right-2 col-sm-6 text-center">
-                                        <a href="#0"><img class="btn-img my-4" src="img/appstore-btn.png" alt=""/></a>
-                                        <a href="#0"><img class="btn-img" src="img/playstore-btn.png" alt=""/></a>
+                                    <div className="col-md-4 offset-md-right-2 col-sm-6 text-center pic3">
+                                        <a href="#0"><img className="btn-img my-4 "  /></a>
+                                        <a href="#0"><img className="btn-img " /></a>
                                     </div>
 
                                 </div>
@@ -195,8 +197,8 @@ const landing =()=>{
                             <div className="row">
                                 <div className="col-md-4 blog-item-wrapper">
                                     <div className="blog-item">
-                                        <div className="blog-img">
-                                            <a href="single.html"><img src="img/plantdisease.jpeg" alt=""/></a>
+                                        <div className="blog-img ">
+                                            <a href="single.html"><img className="pdis"></img></a>
                                         </div>
                                         <div className="blog-text">
                                             <div className="blog-tag">
@@ -220,7 +222,7 @@ const landing =()=>{
                                                 <a className="blog-share" href="google.com">
                                                     <i className="fab fa-facebook-square"></i>
                                                 </a>
-                                                <a class="blog-share" href="google.com">
+                                                <a className="blog-share" href="google.com">
                                                     <i className="fab fa-twitter-square"></i>
                                                 </a>
                                             </div>
@@ -230,7 +232,7 @@ const landing =()=>{
                                 <div className="col-md-4 blog-item-wrapper">
                                     <div className="blog-item">
                                         <div className="blog-img">
-                                            <a href="#"><img src="img/fertilizers.jpeg" alt=""/></a>
+                                            <a href="#"><img className="pfer"></img></a>
                                         </div>
                                         <div className="blog-text">
                                             <div className="blog-tag">
@@ -264,7 +266,7 @@ const landing =()=>{
                                 <div className="col-md-4 blog-item-wrapper">
                                     <div className="blog-item">
                                         <div className="blog-img">
-                                            <a href="#"><img src="img/soiltester.jpeg" alt=""/></a>
+                                            <a href="#"><img className="psoil"></img></a>
                                         </div>
                                         <div className="blog-text">
                                             <div className="blog-tag">
@@ -340,4 +342,4 @@ const landing =()=>{
     )
     
 }
-export default landing
+export default Landing
