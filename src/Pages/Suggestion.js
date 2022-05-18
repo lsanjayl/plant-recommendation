@@ -1,6 +1,10 @@
 import {useNavigate} from "react-router-dom"
+import {useLocation} from 'react-router-dom';
 const Suggestion =()=>{
     const navigate = useNavigate();
+    const loaction=useLocation()
+    const suggested=loaction.state.value;
+    
     return(
         <div className="boxed-page">
             <nav id="gtco-header-navbar" className="navbar navbar-expand-lg py-4">
@@ -26,9 +30,7 @@ const Suggestion =()=>{
                 </h2>
                 <br/>
                 <center><ul id="myList" className="no-bullets nav menu" >
-                    <li onClick={()=>navigate("./details")}><a>Maize</a></li>
-                    <li onClick={()=>navigate("./details")}><a>Wheat</a></li>
-                    <li onClick={()=>navigate("./details")}><a>Onion</a></li>
+                    {suggested.map((i)=><li onClick={()=>navigate("./details")}><a>{i}</a></li>)}
                     </ul>
                     </center>
                 <br/><br/><br/>

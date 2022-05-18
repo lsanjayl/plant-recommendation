@@ -1,5 +1,6 @@
 import {useNavigate} from "react-router-dom"
 import {useState} from"react"
+import PyScript from "../services/pyScript";
 const Forms =()=>{
     const navigate = useNavigate();
     const [values,setValues]=useState({
@@ -9,10 +10,7 @@ const Forms =()=>{
         phValue:"",
         district:""
       })
-    const submit=()=>{
-        navigate("./suggestion");
-        console.log(values)
-    }
+    
     const handleChange=e=>{
       setValues(prevUser => ({ ...prevUser, [e.target.name]: e.target.value }));
     }
@@ -107,7 +105,7 @@ const Forms =()=>{
         </div>
           <br/>
         <div>
-            <center><button type="button" id="btn" className="btn btn-secondary btn-green" onClick={()=>submit()}>SUBMIT</button></center>
+            <center><PyScript values={values}/></center>
         </div>
           <br/>
           
