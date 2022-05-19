@@ -18,7 +18,7 @@ const PyScript=({values})=>{
   //       console.log(output);                
   //    });
   const submit=()=>{
-    navigate("./suggestion",{state:{value:["wheat","maize","corn"]}});
+    navigate("./suggestion",{state:{value:["Wheat","maize","corn"]}});
     console.log(values)
 }
                 return(

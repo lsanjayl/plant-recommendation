@@ -30,7 +30,7 @@ const Suggestion =()=>{
                 </h2>
                 <br/>
                 <center><ul id="myList" className="no-bullets nav menu" >
-                    {suggested.map((i)=><li onClick={()=>navigate("./details")}><a>{i}</a></li>)}
+                    {suggested.map((i)=><li onClick={()=>navigate("./details",{state:{value:i}})}><a>{i}</a></li>)}
                     </ul>
                     </center>
                 <br/><br/><br/>

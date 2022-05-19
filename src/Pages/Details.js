@@ -1,4 +1,19 @@
+import {useLocation} from 'react-router-dom';
 const Details = () => {
+    const loaction=useLocation()
+    const name=loaction.state.value;
+    const details={
+        title:"Sugarcane (Karumbu)",
+        scientificName : "Saccharum officinarum",
+        native:"This crop is majorly cultivated in Trichy, Perambalur, Karur, Salem, Namakkal, Coimbatore, Chennai, Vellore, Tiruvallur, Cuddalore, Krishnagiri, Pudukottai, Nagapattinam, Dharmapuri, Sivagangai, Theni, Ariyalur, Tirunelveli, Kallakurichi, Ranipet, Chengalpattu and Tirupattur.",
+        origin:"Sugar cane originated in New Guinea.",
+        soilType:"Sugarcane is grown in various kinds of soils, such as red volcanic soils and alluvial soils of rivers. The ideal soil is a mixture of sand, silt, and clay particles, with a measure of organic material. The land is ploughed and left to weather for a time before subsoiling (stirring up the subsoil) is carried out.",
+        nutrientValue:"Apply NPK fertilizer as per soil test recommendation as far as possible. If soil test recommendation is not available, adopt a blanket recommendation of 05:05:02 NPK kg/ha.",
+        growthTime:"In India planting Seasons of Sugarcane in subtropical regions are September to October (Autumn) and February to March (spring), whereas in tropical regions it is June to August (Adsali) and January to February and October to November (Eksali).The lowest temperature for good cane-plant growth is about 20 °C (68 °F).",
+        potentialDiseases:['Smut', 'Rust', 'Red rot','Yellow leaf disease','Wilt', 'Ratoon stunting.'],
+        phenotypicOutput:"Sugarcane is a tall perennial plant growing erect even up to 5 or 6 metres. The plant is composed of four principal parts, the root system, the stalk, the leaves and the inflorescence.",
+        cultivationStyle:"Sugarcane is propagated primarily by the planting of cuttings. The sections of the stalk of immature cane used for planting are known as seed cane, or cane sets, and have two or more buds (eyes), usually three. Seed cane is planted in well-worked fields. Mechanical planters that open the furrow, fertilize, drop the seed cane, and cover it with soil are widely used."
+    }
     return (
 
         <div className="boxed-page1">
@@ -8,45 +23,45 @@ const Details = () => {
                     <span className="lnr lnr-leaf"></span>
                 </a>
 
-                <a className="nav-item nav-link" style={{marginRight: "500px", fontFamily: "Georgia", fontSize: "35px"}}>Wheat</a>
+                <a className="nav-item nav-link" style={{marginRight: "500px", fontFamily: "Georgia", fontSize: "35px"}}>{details.title}</a>
             </div>
         </nav>
         <br/><br/><br/>
-        <section className="page-header" style={{ backgroundSize: "cover", height: "300px"}}>
+        <section className="page-header" style={{ backgroundSize: "cover", height: "300px",backgroundImage:`url(${process.env.PUBLIC_URL+ "../../img/"+name+".jpg"})`}}>
             <div className="container">
                 <br/>
                 <div className="second-txt shape" style={{textAlign: "left", paddingLeft: "20px"}}>
                     <br/>
                     <b>
-                    WHEAT (GODHUMAI)
+                   
+                    {details.title}
                     </b>
                     <br/>
-                    <b>SCIENTIFIC NAME :</b> Triticum aestivum
+                    <b>SCIENTIFIC NAME :</b>{details.scientificName}
                     <br/>
-                    <b>NATIVE :</b> It generally grows in Theni, Dindigul, Karur, Coimbatore, Erode, Salem, Dharmapuri, Vellore, Thiruvannamalai, Kancheepuram.
+                    <b>NATIVE :</b> {details.native}
                     <br/>
-                    <b>ORIGIN :</b> It is originated from Ethopian Highlands.
+                    <b>ORIGIN :</b> {details.origin}
                     <br/>
                 </div>
             </div>
         </section>
         <div style={{padding: "20px", paddingRight: "70px" ,textAlign: "start"}}>
             <div>
-                <b>DESCRIPTION :</b><br/> <b>SOIL TYPE:</b><span> <br/> <div style={{marginLeft: "30px"}}> Soils with a clay loam or loam texture, good structure and moderate water holding capacity are ideal for wheat cultivation.</div>
+                <b>DESCRIPTION :</b><br/> <b>SOIL TYPE:</b><span> <br/> <div style={{marginLeft: "30px"}}> {details.soilType}</div>
             </span>
                 <br/>
             </div>
             <div>
                 <span><b>NUTRIENT VALUE :</b> <br/> <div style={{marginLeft: "30px"}}>
-                - Apply NPK fertiliser as per soil test recommendation as far as possible. If soil test recommendation is not available, adopt a blanket recommendation of 80:40:40 NPK kg/ha.
-                <br/>- Apply half of N and full dose of P2O and K2O5 basally before sowing and incorporate in the sowing line.
+                {details.nutrientValue}
                 </div>
             </span>
             </div>
             <br/>
             <div>
                 <span>
-                <b>GROWTH TIME :</b><br/> <div style={{marginLeft: "30px"}}> Wheat is planted in the fall, usually between October and December, and grows over the winter to be harvested in the spring or early summer. Typically, it takes about 7 to 8 months to reach maturity and it creates pretty golden contrast in spring gardens.
+                <b>GROWTH TIME :</b><br/> <div style={{marginLeft: "30px"}}> {details.growthTime}
                 </div>
             </span>
             </div><br/>
@@ -55,21 +70,7 @@ const Details = () => {
                 <b> POTENTIAL DISEASES :</b> 
                 <ul style={{marginleft: "30px"}} className="edited"><b>Fungi:</b>
                     <br/>
-                  <li>Powdery midew</li>
-                  <li>Loose Smut</li>
-                  <li>Brown rust</li>
-                  <li>Stripe rust/ Yellow rust</li>
-                  <li>Black rust</li>
-                  <li>Flag smut</li>
-                  <li>Hill bunt or Stinking smut</li>
-                  <li>Kamal bunt</li>
-                  <li>Leaf blight</li>
-                  <li>Foot rot</li>
-                  <li>Head scab/ Fusarium leaf blotch (Snow Mold)</li>
-                  <li>Leaf Blotch</li>
-                  <li>Helminthosporium leaf blotch (Spot Blotch)</li>
-                  <li>Seeding blight</li>
-                  <li>IPM for Wheat</li>
+                  {details.potentialDiseases.map((i)=><li>{i}</li>)}
                 </ul>
             </span>
             </div>
@@ -77,7 +78,7 @@ const Details = () => {
                 <span> 
                <b> PHENOTYPIC OUTPUT :</b><br/> 
                <div style={{marginLeft: "30px"}}>
-                 Wheat leaves form at each node and include a leaf sheath that wraps around the stem and a leaf blade. Wheat has small auricles. These wrap around the stem at the point where the leaf sheath meets the leaf blade. The spike (also called the ear or head) forms at the top of the plant
+                   {details.phenotypicOutput}
                </div>
             </span>
             </div>
@@ -86,7 +87,7 @@ const Details = () => {
                 <span>
                 <b>CULTIVATION STYLE :</b><br/>
                 <div style={{marginLeft: "30px"}}>
-                    The wheat crop requires a well-pulverized but compact seed bed for good and uniform germination. Three or four ploughings in the summer, repeated harrowing in the rainy season, followed by three or four cultivations and planking immediately before sowing produce a good, firm seed bed for the dry crop on alluvial soils.
+                    {details.cultivationStyle}
                 </div> 
             </span>
             </div>
