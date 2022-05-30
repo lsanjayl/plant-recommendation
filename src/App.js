@@ -13,6 +13,7 @@ function App() {
       <Route path="/forms/suggestion" element={<Suggestion/>}></Route>
     </Routes>
     </Router>
+    // <Details/>
   );
 }
 
